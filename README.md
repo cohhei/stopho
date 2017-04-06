@@ -51,8 +51,11 @@ $ go get -d github.com/kohei-kimura/stopho
 or use homebrew:
 
 ```bash
+$ brew tap kohei-kimura/homebrew-stopho
 $ brew install stopho
 ```
+
+or download from [releases page](https://github.com/kohei-kimura/stopho/releases).
 
 ## Contribution
 
