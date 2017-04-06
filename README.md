@@ -16,6 +16,7 @@
 <!-- /TOC -->
 
 ## Demo
+![demo](./demo_stopho.gif)
 
 ## Usage
 To make sure [available sites list](config/sites.yml), use `list` command:
