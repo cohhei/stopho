@@ -55,4 +55,9 @@ var Sitesjp = []Site{
 		Url:       "https://www.pakutaso.com",
 		SearchUrl: "https://www.pakutaso.com/search.html?search=",
 	},
+	{
+		Name:      "ピクシブ",
+		Url:       "https://www.pixiv.net",
+		SearchUrl: "https://www.pixiv.net/search.php?word=",
+	},
 }
