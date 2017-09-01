@@ -1,7 +1,6 @@
 package command
 
 import (
-	"strings"
 	"testing"
 )
 
@@ -22,9 +21,10 @@ func TestCmdList_All(t *testing.T) {
 | Negative Space | https://www.negativespace.co |
 | Magdeleine     | http://magdeleine.co/        |
 | Picography     | https://picography.co        |
-+----------------+------------------------------+`
++----------------+------------------------------+
+`
 
-	if !strings.Contains(outStream.String(), expected) {
+	if outStream.String() != expected {
 		t.Errorf("\nexpected: \n%s\n got: \n%s", expected, outStream.String())
 	}
 }
@@ -42,9 +42,10 @@ https://picjumbo.com
 https://stocksnap.io
 https://www.negativespace.co
 http://magdeleine.co/
-https://picography.co`
+https://picography.co
+`
 
-	if !strings.Contains(outStream.String(), expected) {
+	if outStream.String() != expected {
 		t.Errorf("\nexpected: \n%s\n got: \n%s", expected, outStream.String())
 	}
 }
@@ -69,9 +70,11 @@ func TestCmdList_All_Jp(t *testing.T) {
 | いらすとや     | http://www.irasutoya.com     |
 | マンガルー     | https://www.mangaloo.jp      |
 | ぱくたそ       | https://www.pakutaso.com     |
-+----------------+------------------------------+`
+| ピクシブ       | https://www.pixiv.net        |
++----------------+------------------------------+
+`
 
-	if !strings.Contains(outStream.String(), expected) {
+	if outStream.String() != expected {
 		t.Errorf("\nexpected: \n%s\n got: \n%s", expected, outStream.String())
 	}
 }
@@ -92,9 +95,11 @@ http://magdeleine.co/
 https://picography.co
 http://www.irasutoya.com
 https://www.mangaloo.jp
-https://www.pakutaso.com`
+https://www.pakutaso.com
+https://www.pixiv.net
+`
 
-	if !strings.Contains(outStream.String(), expected) {
+	if outStream.String() != expected {
 		t.Errorf("\nexpected: \n%s\n got: \n%s", expected, outStream.String())
 	}
 }

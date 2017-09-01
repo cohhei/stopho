@@ -37,9 +37,10 @@ func TestCmdSearch_All(t *testing.T) {
 | Negative Space | https://www.negativespace.co/?s=term |
 | Magdeleine     | http://magdeleine.co/?s=term         |
 | Picography     | https://picography.co/?s=term        |
-+----------------+--------------------------------------+`
++----------------+--------------------------------------+
+`
 
-	if !strings.Contains(outStream.String(), expected) {
+	if outStream.String() != expected {
 		t.Errorf("\nexpected: \n%s\n got: \n%s", expected, outStream.String())
 	}
 }
@@ -57,9 +58,10 @@ https://picjumbo.com/?s=term
 https://stocksnap.io/search/term
 https://www.negativespace.co/?s=term
 http://magdeleine.co/?s=term
-https://picography.co/?s=term`
+https://picography.co/?s=term
+`
 
-	if !strings.Contains(outStream.String(), expected) {
+	if outStream.String() != expected {
 		t.Errorf("\nexpected: \n%s\n got: \n%s", expected, outStream.String())
 	}
 }
@@ -84,9 +86,11 @@ func TestCmdSearch_All_Jp(t *testing.T) {
 | いらすとや     | http://www.irasutoya.com/search?q=term                             |
 | マンガルー     | https://www.mangaloo.jp/m/comas?coma_search_form%5Bkeyword%5D=term |
 | ぱくたそ       | https://www.pakutaso.com/search.html?search=term                   |
-+----------------+--------------------------------------------------------------------+`
+| ピクシブ       | https://www.pixiv.net/search.php?word=term                         |
++----------------+--------------------------------------------------------------------+
+`
 
-	if !strings.Contains(outStream.String(), expected) {
+	if outStream.String() != expected {
 		t.Errorf("\nexpected: \n%s\n got: \n%s", expected, outStream.String())
 	}
 }
@@ -107,9 +111,11 @@ http://magdeleine.co/?s=term
 https://picography.co/?s=term
 http://www.irasutoya.com/search?q=term
 https://www.mangaloo.jp/m/comas?coma_search_form%5Bkeyword%5D=term
-https://www.pakutaso.com/search.html?search=term`
+https://www.pakutaso.com/search.html?search=term
+https://www.pixiv.net/search.php?word=term
+`
 
-	if !strings.Contains(outStream.String(), expected) {
+	if outStream.String() != expected {
 		t.Errorf("\nexpected: \n%s\n got: \n%s", expected, outStream.String())
 	}
 }
@@ -141,9 +147,10 @@ func TestCmdSearch_WithSiteName(t *testing.T) {
 |     NAME     |               URL                |
 +--------------+----------------------------------+
 | StockSnap.io | https://stocksnap.io/search/term |
-+--------------+----------------------------------+`
++--------------+----------------------------------+
+`
 
-	if !strings.Contains(outStream.String(), expected) {
+	if outStream.String() != expected {
 		t.Errorf("\nexpected: \n%s\n got: \n%s", expected, outStream.String())
 	}
 }
