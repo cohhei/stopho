@@ -38,6 +38,12 @@ $ open $(stopho list -q)
 $ open $(stopho search -q $KEYWORD)
 ```
 
+or `open` command:
+
+```bash
+$ stopho open $KEYWORD
+```
+
 ### JP mode :jp:
 `stopho` has a mode for JP. It can generate URLs from [popular sites in Japan](config/sitesjp.yml). If you are familiar with Japanese culture and internet meme, add `alias stopho='stopho --jp'` to your `.bashrc`.
 
