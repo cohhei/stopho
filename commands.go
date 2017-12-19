@@ -59,6 +59,18 @@ var Commands = []cli.Command{
 			},
 		},
 	},
+	{
+		Name:      "open",
+		ShortName: "o",
+		Usage:     "Open search URLs from stock photos web sites",
+		Action:    command.CmdOpen,
+		Flags: []cli.Flag{
+			cli.BoolFlag{
+				Name:  "japan, j",
+				Usage: "Enable Japan mode",
+			},
+		},
+	},
 }
 
 func CommandNotFound(c *cli.Context, command string) {

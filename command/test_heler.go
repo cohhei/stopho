@@ -7,7 +7,7 @@ import (
 )
 
 const Name string = "stopho"
-const Version string = "0.1.0"
+const Version string = "0.2.0"
 
 var GlobalFlags = []cli.Flag{
 	cli.BoolFlag{
